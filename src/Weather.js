@@ -5,7 +5,7 @@ import WeatherInfo from "./WeatherInfo";
 
 export default function Weather(props) {
   const [weatherData, setWeatherData] = useState({ ready: false });
-  const [city, setCity] = useState(props.defaultCity); 
+  const [city, setCity] = useState(props.defaultCity);
 
   function handleResponse(response) {
     //console.log(response.data);
@@ -15,9 +15,9 @@ export default function Weather(props) {
       himidity: response.data.main.humidity,
       date: new Date(response.data.dt * 1000),
       description: response.data.weather[0].description,
-      icon: `http://openweathermap.org/img/wn/${props.data.icon}@2x.png`,
+      icon: `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`,
       wind: response.data.wind.speed,
-      city: response.data.name
+      city: response.data.name,
     });
   }
 
@@ -61,7 +61,7 @@ export default function Weather(props) {
             </div>
           </div>
         </form>
-        <WeatherInfo data={weatherData.date}/>
+        <WeatherInfo data={weatherData.date} />
       </div>
     );
   } else {
