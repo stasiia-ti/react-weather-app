@@ -8,11 +8,11 @@
 
 .Weather h1 {
   color: #878787;
-  margin: 20px 0 0 0;
+  margin: 20px 10px 10px;
   font-size: 24px;
   font-weight: 100;
   line-height: 29px;
-  text-align: center;
+  
 }
 
 .Weather ul {
@@ -27,19 +27,22 @@
   list-style: none;
 }
 
-.Weather img {
-  height: 64px;
-  width: 64px;
+.Weather canvas {
+  height: 65px;
+  width: 65px;
+  padding: 0;
+  margin-top: 10px;
   display: inline-block;
-  margin: -35px 10px auto;
 }
 
 .Weather .temperature {
-  font-weight: bold;
   color: rgb(33, 33, 33);
   font-size: 64px;
   font-weight: 400;
   line-height: 64px;
+  padding: 0;
+  text-shadow: 0.01px 1px 2px rgb(127, 127, 127);
+  display: inline-block;
 }
 
 .Weather .unit {

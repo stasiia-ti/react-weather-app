@@ -13,7 +13,8 @@ export default function Weather(props) {
       temperature: respons.data.main.temp,
       description: respons.data.weather[0].description,
       humidity: respons.data.main.humidity,
-      icon: `http://openweathermap.org/img/wn/${respons.data.weather[0].icon}@2x.png`,
+      date: new Date(respons.data.dt * 1000),
+      icon: respons.data.weather[0].icon,
       wind: respons.data.wind.speed,
       city: respons.data.name,
     });
