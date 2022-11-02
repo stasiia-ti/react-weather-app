@@ -24,12 +24,10 @@ export default function WeatherIcon(props){
     
     }
     return(
-        // <img src="https://raw.githubusercontent.com/divyanshu013/react-animated-weather/HEAD/react-animated-weather.gif" 
-        // alt={props.alt} />
         <ReactAnimatedWeather
         icon={codeWapping[props.code]}
         color= "black"
-        size= {64}
+        size= {props.size}
         animate={true}
       />
     );

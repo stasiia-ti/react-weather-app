@@ -4,6 +4,8 @@
   padding: 16px;
   border-radius: 4px;
   color: rgb(135, 135, 135);
+  background-color: #fffbf4;
+  font-family: 'Exo 2', sans-serif;;
 }
 
 .Weather h1 {
@@ -28,8 +30,6 @@
 }
 
 .Weather canvas {
-  height: 65px;
-  width: 65px;
   padding: 0;
   margin-top: 10px;
   display: inline-block;
